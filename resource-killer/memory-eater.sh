@@ -7,5 +7,6 @@ MEMORY_HOG=()
 
 while true; do
     MEMORY_HOG+=("$(head -c 10M </dev/zero | tr '\0' 'x')")
+    echo "Appending 10M chunks to memory"
     sleep 0.5
 done
